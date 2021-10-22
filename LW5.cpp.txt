@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+#include "windows.h"
+using namespace std;
+int main()
+{
+SetConsoleCP(1251);
+SetConsoleOutputCP(1251);
+float F, a, b, c, x;
+cout << "Введіть a, b, c, x:" << endl;
+cin >> a >> b >> c >> x;
+if ((c + b < 0) && (b != 0) && (pow(c, 3) != 0)) {
+F = 5 * pow(x, 2) + (10 * b / pow(c, 3));
+}
+else {
+if ((c + b > 0) && (b == 0) && (x - pow(c, 2) != 0)) {
+F = (pow(b, 3) - a) / (x - pow(c, 2));
+}
+else {
+if (5 * c != 0) {
+F = x / (5 * c);
+}
+else {
+cout << "Помилка";
+}
+}
+}
+cout << "F = " << F << endl;
+}
